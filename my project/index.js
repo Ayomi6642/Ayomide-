@@ -30,6 +30,15 @@ form.addEventListener("submit", (event) => {
     success.querySelector("#success__email").textContent = value;
     form.reset();
   }
+
+  else {
+    disableError();
+    signup.classList.add("hidden");
+    success.classList.remove("hidden");
+    success.querySelector("#success__email").textContent = value;
+    form.reset();
+  }
+  
 });
 document
   .getElementsByClassName("success__button")[0]
